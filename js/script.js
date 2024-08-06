@@ -3,7 +3,6 @@ const headerInput = document.querySelector('.header-input')
 const todoList = document.querySelector('.todo-list')
 const todoCompleted = document.querySelector('.todo-completed')
 
-
 const toDoData = JSON.parse(localStorage.getItem('toDo')) || []
 
 const render = function () {
