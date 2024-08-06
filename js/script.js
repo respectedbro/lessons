@@ -28,6 +28,7 @@ const render = function () {
 		}
 
 		li.querySelector('.todo-complete').addEventListener('click', function() {	
+			localStorage.setItem('toDo', JSON.stringify(toDoData))
 			item.completed = !item.completed
 			render()
 		})
@@ -40,6 +41,7 @@ const render = function () {
 		
 	})
 }
+render()
 
 todoControl.addEventListener('submit', function (event) {
 	event.preventDefault()
@@ -56,4 +58,4 @@ todoControl.addEventListener('submit', function (event) {
 	localStorage.setItem('toDo', JSON.stringify(toDoData))
 	render()
 })
-window.addEventListener('DOMContentLoaded', render) 
+
